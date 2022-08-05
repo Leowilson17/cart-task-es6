@@ -1,0 +1,30 @@
+.main-div{
+text-align: center;
+line-height: 40px;
+}
+input{
+transform: translateY(230px);
+text-transform: capitalize;
+}
+.btn-container{
+    transform: translateY(250px);
+}
+.btn-style{
+    font-size: 20px;
+    padding: 10px;
+    text-transform: capitalize;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.btn-style:hover{
+    color: orchid;
+}
+#input{
+    font-size: 20px;
+}
+#input:focus{
+    outline: 2px solid skyblue;
+    border: none;
+}

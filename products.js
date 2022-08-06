@@ -1,5 +1,5 @@
 "usestrict";
-var hostels = [
+export var hostels = [
     {
         id: 1,
         name: 'Zolo Dune',

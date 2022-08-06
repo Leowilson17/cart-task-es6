@@ -2,7 +2,7 @@ import {name}  from  "./exp.js";
 console.log(name);
 import {sample} from "./exp.js";
 console.log(sample);
-import {hostels} from "./exp.js";
+import {hostels} from "./products.js";
 console.log(hostels);
 
 

@@ -41,24 +41,6 @@ var hostels = [
     name: "Sai Atcharaa Boys Hostel",
     location: "Guindy",
     food_availability: "No"
-  },
-  {
-    id: 8,
-    name: "Pudur Lucky Hostel",
-    location: "Chepak",
-    food_availability: "Yes"
-  },
-  {
-    id: 9,
-    name: "Royal Comfor Mansion",
-    location: "Vadapalani",
-    food_availability: "No"
-  },
-  {
-    id: 10,
-    name: "SR Boys Hostel",
-    location: "Kattankulathur",
-    food_availability: "Yes"
   }
 ];
 
@@ -69,32 +51,25 @@ var userData = document.getElementById("input");
 addBtn.addEventListener("click", () => {
   let number = userData.value;
   hostels.map(data => {
-    if (data.id == number) {
-      if (!empty.includes(data)) {
-        data.qty = 1;
-        return empty.push(data);
-      } else {
-        data.qty++;
-      }
+    if (data.id == number && !empty.includes(data)) {
+      data.qty = 1;
+      return empty.push(data);
+    } else {
+      data.qty++;
     }
   });
   userData.value = "";
 });
 
 // cart item remove btn
+var check;
 var removeBtn = document.getElementById("remove-btn");
 removeBtn.addEventListener("click", () => {
   let userNumber2 = userData.value;
-  let checkId = false;
-  empty.find(erase => {
-    if (erase.id == userNumber2) {
-      checkId = true;
-      erase.qty = 0;
-    }
+  check = empty.filter(erase => {
+    return erase.id != userNumber2;
   });
-  if (checkId == false) {
-    alert("Please Choose Valid ID");
-  }
+  empty = check;
   userData.value = "";
 });
 
